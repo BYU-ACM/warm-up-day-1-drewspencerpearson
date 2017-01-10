@@ -19,7 +19,7 @@ def Newtons_Method(func, func_prime, x_0, iters=100, tol=1e-5):
     else:
       x_0 = x_new
       i += 1
-
+  return None
 """def func(x):
   return x**2.-5
 def func_prime(x):
