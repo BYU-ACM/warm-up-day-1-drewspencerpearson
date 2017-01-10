@@ -10,4 +10,20 @@ def Newtons_Method(func, func_prime, x_0, iters=100, tol=1e-5):
      returns: a root(int) if found
               None(none-type) else
   """
-  pass
+  i = 1
+  x_new = x_0-func(x_0)/func_prime(x_0)
+  while i < iters:
+    x_new = x_0-func(x_0)/func_prime(x_0)
+    if abs(x_new-x_0) < tol:
+      return x_new
+    else:
+      x_0 = x_new
+      i += 1
+
+"""def func(x):
+  return x**2.-5
+def func_prime(x):
+  return 2*x
+x_0 = 2
+
+print Newtons_Method(func, func_prime,x_0)"""
